@@ -27,10 +27,15 @@ chmod -R 775 /var/www/html/storage \
              /var/www/html/bootstrap/cache \
              /var/www/html/database
 
-# Run migrations if enabled or in production
+# Run migrations and optional seeder if enabled or in production
 if [ "${RUN_MIGRATIONS:-true}" = "true" ]; then
     echo "Ejecutando migraciones de base de datos..."
     php artisan migrate --force || true
+
+    if [ "${RUN_SEEDER:-false}" = "true" ]; then
+        echo "Ejecutando sembrado inicial de base de datos..."
+        php artisan db:seed --force || true
+    fi
 fi
 
 # Cache configuration, routes, and views if APP_KEY is set
