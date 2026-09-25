@@ -1,0 +1,26 @@
+{
+  "node_modules/livekit-client/dist/livekit-client.esm.mjs": {
+    "file": "assets/livekit-client.esm-YFZ4iydz.js",
+    "name": "livekit-client.esm",
+    "src": "node_modules/livekit-client/dist/livekit-client.esm.mjs",
+    "isDynamicEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-CgWoPmen.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-CkJCAnMZ.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/livekit-client/dist/livekit-client.esm.mjs"
+    ]
+  }
+}
